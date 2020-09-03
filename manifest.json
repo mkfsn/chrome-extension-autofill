@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+	"name": "Autofill",
+	"version": "0.1.0",
+	"author": "mkfsn",
+	"browser_action": {
+		"default_title": "Autofill",
+		"default_popup": "popup.html"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"all_frames": true,
+			"js": ["js/jquery-3.4.0.min.js", "content.js"]
+		}
+	],
+	"permissions": [
+		"storage",
+		"activeTab",
+		"<all_urls>",
+		"tabs"
+	]
+}
